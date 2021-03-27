@@ -37,8 +37,8 @@ jobs:
 
       - name: Update Dist
         run: |
-          cp dist/*.tar.gz upstream/dist/
-          cp dist/*.zip upstream/dist/
+          cp -f dist/*.tar.gz upstream/dist/
+          cp -f dist/*.zip upstream/dist/
           cd upstream/dist
           git config --local user.name 'Github Actions'
           git config --local user.email 'github-actions@users.noreply.github.com'

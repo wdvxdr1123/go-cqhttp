@@ -44,5 +44,6 @@ jobs:
           git config --local user.email 'github-actions@users.noreply.github.com'
           git add --all
           git commit -m "update to ${GITHUB_REF#"refs/tags/"}"
-          git push
+          git tag -a ${GITHUB_REF#"refs/tags/"}
+          git push --tags
 
